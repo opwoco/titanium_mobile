@@ -1081,7 +1081,7 @@ build.prototype = {
 				'__PROJECT_NAME__': this.tiapp.name,
 				'__PROJECT_ID__': this.tiapp.id,
 				'__URL__': this.tiapp.id,
-				'__URLSCHEME__': this.tiapp.name.replace(/\./g, '_').replace(/ /g, '').toLowerCase(),
+				'__URLSCHEME__': this.tiapp.name.replace(/\./g, '_').replace(/ /g, '').replace(/[^a-z0-9]/gi, '').toLowerCase(),
 				'__ADDITIONAL_URL_SCHEMES__': fbAppId ? '<string>fb' + fbAppId + '</string>' : ''
 			};
 		
